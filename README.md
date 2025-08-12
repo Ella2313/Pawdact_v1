@@ -11,3 +11,4 @@ I made my Project with HTML, CSS, Java Script and lots of Passion and Hard Work!
 
 I really Struggled with CSS and Java Script as it was my first time using them but I learnt quite alot like Patience, Resilience and Hard Work!
 
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
