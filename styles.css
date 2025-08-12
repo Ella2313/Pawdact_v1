@@ -557,6 +557,7 @@ header {
 .tips-section {
   width: 100%;
   min-height: 100vh;
+  bottom: 200;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -567,7 +568,7 @@ header {
 
 .tips-container {
   max-width: 800px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(254, 255, 239, 0.9);
   border-left: 5px solid #ffd735;
   padding: 40px;
   border-radius: 20px;
@@ -584,7 +585,7 @@ header {
 
 .tips-container p {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.4;
   color: #333;
 }
 
@@ -603,4 +604,33 @@ header {
   position: absolute;
   bottom: 15px;
   right: 15px;
+}
+
+.facts-box {
+  align-items: center;
+  min-height: 30vh;
+  position: absolute;
+  justify-content: center;
+  bottom: -240px;
+  left: 70%;
+  right: -80%;
+  background: #feffe8;
+  border-left: 5px solid #ffcc24;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #444;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.facts-box h3 {
+  margin: 0 0 5px;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.1rem;
+  color: #fffc34;
+}
+
+.facts-box p {
+font-size: 1.10;
 }
