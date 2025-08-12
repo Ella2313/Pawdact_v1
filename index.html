@@ -1,146 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tips on animals</title>
-      <link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tips on Animals</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-    
-<body>
-	</style>
-</head>
-<body>
-<header>
-	<div class="wrapper">
-    <nav class="nav">
+  <header>
+    <div class="wrapper">
+      <nav class="nav">
         <div class="nav-logo">
-            <p>Pawdact</p>
+          <p>Pawdact</p>
         </div>
         <div class="nav-menu" id="navMenu">
-            <ul>
-                <li><a href="#" class="link active">Home</a></li>
-                <li><a href="#" class="link">About</a></li>
-                <li><a href="#" class="link">Services</a></li>
-                <li><a href="#" class="link">Facts</a></li>
-            </ul>
+          <ul>
+            <li><a href="#" class="link active">Home</a></li>
+            <li><a href="#" class="link" onclick="toggleAbout()">About</a></li>
+            <li><a href="#" class="link" onclick="togglePetcare()">Petcare</a></li>
+           <li><a href="#" class="link" onclick="toggletipsfacts()">Tips & Facts</a></li>
+          </ul>
         </div>
-        <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">login</button>
-            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-        </div>
-    </nav>
-<!----------------------------- Form box ----------------------------------->    
-    <div class="form-box">
-        
-        <!------------------- login form -------------------------->
-        <div class="login-container" id="login">
-            <div class="top">
-                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
-                <header>Login</header>
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Username or Email">
-                <i class="bx bx-user"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="login">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="login-check">
-                    <label for="login-check"> Remember Me</label>
-                </div>
-                <div class="two">
-                    <label><a href="#">Forgot password?</a></label>
-                </div>
-            </div>
-        </div>
-        <!------------------- registration form -------------------------->
-        <div class="register-container" id="register">
-            <div class="top">
-                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
-                <header>Sign up</header>
-            </div>
-            <div class="two-forms">
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Firstname">
-                    <i class="bx bx-user"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Lastname">
-                    <i class="bx bx-user"></i>
-                </div>
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email">
-                <i class="bx bx-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Register">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="register-check">
-                    <label for="register-check"> Remember Me</label>
-                </div>
-                <div class="two">
-                    <label><a href="#">Terms & conditions</a></label>
-                </div>
-            </div>
-        </div>
+      </nav>
     </div>
-</div>   
-<script>
-   
-   function myMenuFunction() {
-    var i = document.getElementById("navMenu");
-    if(i.className === "nav-menu") {
-        i.className += " responsive";
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h1>Welcome to Pawduct 🐾</h1>
+      <p>Learn how to care for your furry, feathery, and scaly friends!</p>
+    </div>
+    <div class="paw-decor paw1">🐶</div>
+    <div class="paw-decor paw2">🐱</div>
+    <div class="paw-decor paw3">🐰</div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about" style="display: none;">
+    <div class="about-container">
+      <h2>🐾 About Us</h2>
+      <p>
+        At Pawduct, we’re all about happy paws and kind hearts! 🐶🐱🐰 
+        We teach kids and teens how to love, care for, and understand animals 
+        through fun tips, cute facts, and awesome activities. Whether you're dreaming 
+        of being a vet or just love your furry friends, Pawduct is your go-to animal buddy!
+      </p>
+
+      <!-- Vision Box -->
+      <div class="vision-box">
+        <h3>🌟 Vision</h3>
+        <p>Our vision is to create a world where every child becomes an animal hero! 🦸‍♀🐾</p>
+      </div>
+
+      <!-- Mission Box -->
+      <div class="mission-box">
+        <h3>🚀 Mission</h3>
+        <p>Our mission is to spark kindness, teach cool animal care tips, and help young 
+        minds grow into paw-some pet protectors! 🐕💡🐾</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pet Care Section -->
+  <section class="petcare-section" id="petcare" style="display: none;">
+    <div class="petcare-container">
+      <h2>🐾 Animal Awareness</h2>
+      <p>
+        At Pawduct, we share the best tips and advice for caring for pets of all shapes and sizes! 
+        From feeding to grooming to just giving love, our goal is to help you make your pets' lives 
+        as happy as possible. 🐕🐾
+      </p>
+    </div>
+  </section>
+ <section id="tipsfacts" class="tips-section" style="display: none;">
+  <div class="tips-container">
+    <h2>🐱Tips</h2>
+    
+<p>1. Fresh water always! 💧 Every animal need clean water, just like humans.🐹</p>
+<p>2. Daily playtime = happy pets. Toss a ball, wave a toy, or just run around.🏃‍♀</p>
+<p>3. Healthy treats only — too much sugar or junk food can hurt them.🍏</p>
+<p>4. Safe space — make sure pets have a quiet, cozy corner to rest.🛏</p>
+<p>5. Regular clean-up — litter boxes, cages, tanks… no one likes a stinky home.🧹</p>
+<p>6. Gentle handling — some animals don’t like being picked up too much.👐</p>
+<p>7. Vet check-ups are like school report cards for health. 🩺</p>
+    <!-- Facts -->
+    <div class="facts-box">
+      <h3>🐶Facts</h3>
+      <p>
+1. A group of cats is called a clowder. Sounds like a kitty superhero team! 🐱
+2. Rabbits can’t vomit — so they need extra-safe food and clean living spaces. 🐇
+3. Dogs can smell your feelings — happy, sad, scared… they just know. 🐕💗
+4. Cows have best friends and they get stressed when separated. 🐄🥹</p>
+    </div>
+  </div>
+</section>
+<!-- script -->
+  <script>
+  const aboutSection = document.getElementById("about");
+  const petcareSection = document.getElementById("petcare");
+  const tipsfactsSection = document.getElementById("tipsfacts");
+
+  // Toggle About Section
+  function toggleAbout() {
+    petcareSection.style.display = "none";
+    tipsfactsSection.style.display = "none";
+    if (aboutSection.style.display === "none" || aboutSection.style.display === "") {
+      aboutSection.style.display = "block";
+      aboutSection.scrollIntoView({ behavior: "smooth" });
     } else {
-        i.className = "nav-menu";
+      aboutSection.style.display = "none";
     }
-   }
- 
-</script>
-<script>
-    // Get the login and register buttons and forms
-    var loginBtn = document.getElementById("loginBtn");
-    var registerBtn = document.getElementById("registerBtn");
-    var a = document.getElementById("loginBtn");
-    var b = document.getElementById("registerBtn");
-    var x = document.getElementById("login");
-    var y = document.getElementById("register");
-    function login() {
-        x.style.left = "4px";
-        y.style.right = "-520px";
-        a.className += " white-btn";
-        b.className = "btn";
-        x.style.opacity = 1;
-        y.style.opacity = 0;
+  }
+
+  // Toggle Pet Care Section
+  function togglePetcare() {
+    aboutSection.style.display = "none";
+    tipsfactsSection.style.display = "none";
+    if (petcareSection.style.display === "none" || petcareSection.style.display === "") {
+      petcareSection.style.display = "block";
+      petcareSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      petcareSection.style.display = "none";
     }
-    function register() {
-        x.style.left = "-510px";
-        y.style.right = "5px";
-        a.className = "btn";
-        b.className += " white-btn";
-        x.style.opacity = 0;
-        y.style.opacity = 1;
+  }
+
+  // Toggle Tips & Facts Section
+  function toggletipsfacts() {
+    aboutSection.style.display = "none";
+    petcareSection.style.display = "none";
+    if (tipsfactsSection.style.display === "none" || tipsfactsSection.style.display === "") {
+      tipsfactsSection.style.display = "block";
+      tipsfactsSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      tipsfactsSection.style.display = "none";
     }
+  }
 </script>
 </body>
 </html>
