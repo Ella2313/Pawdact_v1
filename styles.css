@@ -19,14 +19,16 @@ body {
   letter-spacing: 2px;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  background: url("img/About_page_background.webp");
+  background: url("img/About_page_background.webp")no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position:top;
+  background-color: #e3d2c3;
 }
 
 /* Oopsie fix: \h1 was a typo */
 h1 {
   text-align: center;
+  align-self: start;
   color: #b7ff00;
   font-size: 3em;
   margin-bottom: 20px;
@@ -62,7 +64,7 @@ h1 {
 .nav-menu ul li .link {
   text-decoration: none;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   padding-bottom: 15px;
   margin: 0 25px;
 }
@@ -108,13 +110,12 @@ h1 {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: transparent(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: none;
   align-items: center;
   justify-content: center;
-  width: 512px;
+  width: 550px;
   height: 500px;
-  background: rgb(255, 246, 215);
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -128,6 +129,7 @@ h1 {
 .login-container,
 .register-container {
   position: absolute;
+  background: linear-gradient(135deg, #ffecd2, #ffccbb);
   width: 100%;
   padding: 20px;
   display: flex;
@@ -198,7 +200,7 @@ header {
 .submit {
   font-size: 15px;
   font-weight: 500;
-  color: white;
+  color: rgb(255, 255, 255);
   background: #007bff;
   height: 45px;
   width: 100%;
@@ -339,4 +341,266 @@ header {
     flex-direction: column;
     gap: 10px;
   }
+}
+
+
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffd6e0 0%, #ffe9ec 100%);
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* Needed so Vision can be positioned inside */
+}
+
+.about-container {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid #ff4f81;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+}
+
+.about-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #ff4f81;
+}
+
+.about-container p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.mission-box {
+  align-items: center;
+  min-height: 30vh;
+  position: absolute;
+  justify-content: center;
+  bottom: -350px;
+  left: 0%;
+  right: -1%;
+  background: #fff5f7;
+  border-left: 5px solid #ff4f81;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #444;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-box h3 {
+  margin: 0 0 5px;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.1rem;
+  color: #ff4f81;
+}
+/* Vision box in bottom right corner */
+.vision-box {
+  align-items: center;
+  min-height: 30vh;
+  position: absolute;
+  justify-content: center;
+  bottom: -200px;
+  left: 95%;
+  right: -80%;
+  background: #fff5f7;
+  border-left: 5px solid #ff4f81;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #444;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vision-box h3 {
+  margin: 0 0 5px;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.1rem;
+  color: #ff4f81;
+}
+
+
+
+
+.petcare-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #c3f8ff 0%, #a0e7e5 100%); /* Soft aqua theme */
+  font-family: 'Poppins', sans-serif;
+}
+
+.petcare-container {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid #009ab2;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+}
+
+.petcare-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #00b4d8; /* Aqua blue for freshness */
+}
+
+.petcare-container p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Decorative icons */
+.petcare-container::before {
+  content: "🐶";
+  font-size: 2rem;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.petcare-container::after {
+  content: "🐱";
+  font-size: 2rem;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+
+
+
+
+
+
+
+.home-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-content {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 50px;
+  border-radius: 25px;
+  max-width: 700px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  color: #4b2e2e;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin: 15px 0 30px;
+  color: #5a3e36;
+}
+
+.home-btn {
+  background: #ff7f50;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background: #ff5722;
+}
+
+/* Floating paw/animal emoji decorations */
+.paw-decor {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.4;
+  animation: float 6s ease-in-out infinite;
+}
+
+.paw1 { top: 10%; left: 5%; animation-delay: 0s; }
+.paw2 { bottom: 15%; right: 10%; animation-delay: 2s; }
+.paw3 { top: 50%; right: 20%; animation-delay: 4s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.tips-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fffcc3 0%, #e7e3a0 100%); /* Soft aqua theme */
+  font-family: 'Poppins', sans-serif;
+}
+
+.tips-container {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid #ffd735;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+}
+
+.tips-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fff350; /* Aqua blue for freshness */
+}
+
+.tips-container p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Decorative icons */
+.tips-container::before {
+  content: "🐶";
+  font-size: 2rem;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.tips-container::after {
+  content: "🐱";
+  font-size: 2rem;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
